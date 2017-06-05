@@ -147,27 +147,29 @@ class DailymotionController extends BaseController {
 		//echo "<pre>"; print_r($table_data);
 		
 		if($table_data->username) {
-            $viewresponse_url = "https://api.dailymotion.com/user/".$table_data->username."/videos?fields=created_time,views_last_month,likes_total&limit=70&sort=recent";
+            //$viewresponse_url = "https://api.dailymotion.com/user/".$table_data->username."/videos?fields=created_time,views_last_month,likes_total&limit=25&sort=recent";
+            $viewresponse_url = "https://api.dailymotion.com/user/".$table_data->username."/likes";
         }
         $viewresponse = file_get_contents($viewresponse_url);
         $results = json_decode($viewresponse, TRUE);
-        //echo "<pre>"; print_r($results).'<br/>'; 
 		
+        echo "<pre>"; print_r($results).'<br/>'; die;
         $views_total = $results['total'];
-        //echo "<pre>"; print_r($views_total).'<br/>';
-		
-		$res  = array();
+      		
+		$lik  = array();
 		foreach($results['list'] as $engagementchart){
+			$lik[] = $engagementchart['likes'];
+           
+            $count_likes+= count($engagementchart['likes_total']);
 			
-			
-			 $date = date('Y-m-d');           
+			 /* $date = date('Y-m-d');           
             $date_format = explode(" ", $engagementchart['created_time']);
             $date = $date_format[0];
             $date = date("Y,m,d", strtotime($date));
             //echo "<pre>"; print_r($date).'<br>'; echo "</pre>";           
             $res[].= '[Date.UTC('.$date.',0,0,0),'.$engagementchart['likes_total'].']';
-            $count_likes+= count($engagementchart['likes_total']);
-			echo "<pre>"; print_r($count_likes); die;
+            $count_likes = $engagementchart['likes_total']; */
+			//echo "<pre>"; print_r($count_likes); 
 			
 			
 			/* date_default_timezone_set('UTC');
@@ -189,7 +191,7 @@ class DailymotionController extends BaseController {
 
 			//$total_likes = $likes_total;
 		}
-		 $data_subscribersLost = implode(",", $res); 
+		 $data_subscribersLost = implode(",", $lik); 
 		
 		
 		/*  $date = date('Y-m-d');
