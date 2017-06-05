@@ -1,0 +1,25 @@
+/*@import url(http://fonts.googleapis.com/css?family=Open+Sans:700,300,600,400&subset=latin,vietnamese);*/
+@font-face {
+    font-family: 'VIEAvantGardeRegular';
+    src: url('../fonts/vie-avantgarde.eot');
+    src: url('../fonts/vie-avantgarde.eot') format('embedded-opentype'),
+         url('../fonts/vie-avantgarde.woff') format('woff'),
+         url('../fonts/vie-avantgarde.ttf') format('truetype'),
+         url('../fonts/vie-avantgarde.svg#VIEAvantGardeRegular') format('svg');
+}
+@font-face {
+    font-family: 'VIEAvantGardeBold';
+    src: url('../fonts/vie-avantgardebold.eot');
+    src: url('../fonts/vie-avantgardebold.eot') format('embedded-opentype'),
+         url('../fonts/vie-avantgardebold.woff') format('woff'),
+         url('../fonts/vie-avantgardebold.ttf') format('truetype'),
+         url('../fonts/vie-avantgardebold.svg#VIEAvantGardeBold') format('svg');
+}
+@font-face {
+    font-family: 'VIEAvantGardeDemibold';
+    src: url('../fonts/vie-avantgardedemibold.eot');
+    src: url('../fonts/vie-avantgardedemibold.eot') format('embedded-opentype'),
+         url('../fonts/vie-avantgardedemibold.woff') format('woff'),
+         url('../fonts/vie-avantgardedemibold.ttf') format('truetype'),
+         url('../fonts/vie-avantgardedemibold.svg#VIEAvantGardeDemibold') format('svg');
+}

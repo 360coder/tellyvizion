@@ -1,0 +1,545 @@
+
+
+Log file initialized at Monday, February 6, 2017 - 10:06 PM UTC  
+Timestamp format used: YYYYMMDD.HH:MM:SS UTC
+QBWebConnector 2.2 has been initialized with its logging status to level = DEBUG.
+Please restart QBWebConnector for any change in log level to take effect. Use file menu to clear log.
+
+20170206.22:06:47 UTC	: QBWebConnector.RegistryManager.setUpdateLock() : HKEY_CURRENT_USER\Software\Intuit\QBWebConnector\UpdateLock has been set to False
+20170206.22:06:47 UTC	: QBWebConnector.RegistryManager.setUpdateLock() : ********************* Update session unlocked *********************
+20170206.22:06:47 UTC	: QWCReader.ParseQWC() : Contents of QWC file: -
+<QBWCXML>
+  <AppName>DashOrdersTesting</AppName>
+  <AppID></AppID>
+  <AppURL>http://35.154.123.8/ci/qb_web_connector/qb_web_connector_import</AppURL>
+  <AppDescription></AppDescription>
+  <AppSupport>http://35.154.123.8/ci/qb_web_connector/qb_web_connector_import</AppSupport>
+  <UserName>DashOrders</UserName>
+  <OwnerID>{b78-d58c4ee-4b8e32eac-a1-ea7f8f80d16}</OwnerID>
+  <FileID>{30-93347df620f3400-195750-a-bcbfdb34}</FileID>
+  <UserID>{2}</UserID>
+  <QBType>QBFS</QBType>
+  <Scheduler>
+    <RunEveryNMinutes>20</RunEveryNMinutes>
+  </Scheduler>
+  <IsReadOnly>false</IsReadOnly>
+</QBWCXML>
+20170206.22:06:47 UTC	: QBWebConnector.WebServiceManager.ReadQWC(QWCReader QWC) : Parsing application configuration xml file to load its content to variables
+20170206.22:06:48 UTC	:  : ~SingleInstanceHandler() - usingInstanceChannel = false. Returning without any Registry key delete or unmarshalling.
+20170206.22:06:59 UTC	: QBWebConnector.SOAPWebService.ConnectToQB() : Connecting to QuickBooks...
+20170206.22:07:01 UTC	: QBWebConnector.SOAPWebService.ConnectToQB() : Error connecting to QuickBooks. Error message received from QuickBooks was <If the QuickBooks company data file is not open, a call to the "BeginSession" method must include the name of the data file.>.
+20170206.22:07:01 UTC	: QBWebConnector.SOAPWebService.deleteFileIDValueFromQB() : QBWC1078: An error occured while clearing FileID from QuickBooks.
+Reason: Error connecting to QuickBooks. Error message received from QuickBooks was <If the QuickBooks company data file is not open, a call to the "BeginSession" method must include the name of the data file.>.
+20170206.22:07:09 UTC	: QBWebConnector.SOAPWebService.deleteFileIDValueFromQB() : Session ended and connection to QuickBooks closed.
+20170206.22:07:09 UTC	: RemoveApp() : Application DashOrdersTesting cannot be removed.
+20170206.22:07:35 UTC	: QBWebConnector.SOAPWebService.ConnectToQB() : Connecting to QuickBooks...
+20170206.22:07:35 UTC	: QBWebConnector.SOAPWebService.ConnectToQB() : Error connecting to QuickBooks. Error message received from QuickBooks was <If the QuickBooks company data file is not open, a call to the "BeginSession" method must include the name of the data file.>.
+20170206.22:07:35 UTC	: QBWebConnector.SOAPWebService.deleteFileIDValueFromQB() : QBWC1078: An error occured while clearing FileID from QuickBooks.
+Reason: Error connecting to QuickBooks. Error message received from QuickBooks was <If the QuickBooks company data file is not open, a call to the "BeginSession" method must include the name of the data file.>.
+20170206.22:07:37 UTC	: QBWebConnector.SOAPWebService.deleteFileIDValueFromQB() : Session ended and connection to QuickBooks closed.
+20170206.22:07:37 UTC	: RemoveApp() : Application DashOrdersTesting cannot be removed.
+20170206.22:07:40 UTC	: QBWebConnector.RegistryManager.setUpdateLock() : HKEY_CURRENT_USER\Software\Intuit\QBWebConnector\UpdateLock has been set to False
+20170206.22:07:40 UTC	: QBWebConnector.RegistryManager.setUpdateLock() : ********************* Update session unlocked *********************
+20170206.22:07:40 UTC	: StopFlexConnector : Object reference not set to an instance of an object.
+20170206.22:07:40 UTC	: StopFlexConnector :    at QBWebConnector.QBWebConnector.StopFlexConnector()
+
+
+Log file initialized at Monday, February 6, 2017 - 10:07 PM UTC  
+Timestamp format used: YYYYMMDD.HH:MM:SS UTC
+QBWebConnector 2.2 has been initialized with its logging status to level = DEBUG.
+Please restart QBWebConnector for any change in log level to take effect. Use file menu to clear log.
+
+20170206.22:07:57 UTC	: QBWebConnector.RegistryManager.setUpdateLock() : HKEY_CURRENT_USER\Software\Intuit\QBWebConnector\UpdateLock has been set to False
+20170206.22:07:57 UTC	: QBWebConnector.RegistryManager.setUpdateLock() : ********************* Update session unlocked *********************
+20170206.22:07:57 UTC	: QBWebConnector.RegistryManager.getValue() : Unable to get from RegistryKey =<HKEY_CURRENT_USER\Software\Intuit\QBWebConnector\SOAPWebServices\DashOrdersTesting> for ValueName=<RequestedVersion>
+20170206.22:07:57 UTC	: QBWebConnector.RegistryManager.getValue() : Reason: Object reference not set to an instance of an object.
+20170206.22:07:57 UTC	: QBWebConnector.RegistryManager.getValue() : Unable to get from RegistryKey =<HKEY_CURRENT_USER\Software\Intuit\QBWebConnector\Scheduler\DashOrdersTesting> for ValueName=<DefaultInterval>
+20170206.22:07:57 UTC	: QBWebConnector.RegistryManager.getValue() : Reason: Object reference not set to an instance of an object.
+20170206.22:07:57 UTC	: QBWebConnector.RegistryManager.getValue() : Unable to get from RegistryKey =<HKEY_CURRENT_USER\Software\Intuit\QBWebConnector\Scheduler\DashOrdersTesting> for ValueName=<MinIntervalInSeconds>
+20170206.22:07:57 UTC	: QBWebConnector.RegistryManager.getValue() : Reason: Object reference not set to an instance of an object.
+20170206.22:07:57 UTC	: QBWebConnector.RegistryManager.setUpdateLock() : HKEY_CURRENT_USER\Software\Intuit\QBWebConnector\UpdateLock has been set to False
+20170206.22:07:57 UTC	: QBWebConnector.RegistryManager.setUpdateLock() : ********************* Update session unlocked *********************
+20170206.22:07:58 UTC	: QBWebConnector_Load() : 
+QuickBooks Web Connector 2.2.0.71 has started.
+Tuesday, February 7, 2017 at 3:37:58 AM
+20170206.22:07:58 UTC	: QBWebConnector_Load() : QBWC Form Loaded
+20170206.22:07:58 UTC	: QWCReader.ParseQWC() : Contents of QWC file: -
+<QBWCXML>
+  <AppName>DashOrdersTesting</AppName>
+  <AppID></AppID>
+  <AppURL>http://35.154.123.8/ci/qb_web_connector/qb_web_connector_import</AppURL>
+  <AppDescription></AppDescription>
+  <AppSupport>http://35.154.123.8/ci/qb_web_connector/qb_web_connector_import</AppSupport>
+  <UserName>DashOrders</UserName>
+  <OwnerID>{-a16288fde74ae8ce5e18f07-dae3b4b-8c-}</OwnerID>
+  <FileID>{3d0-503325-f340-f-9b43dbb1490cfa6770}</FileID>
+  <UserID>{2}</UserID>
+  <QBType>QBFS</QBType>
+  <Scheduler>
+    <RunEveryNMinutes>20</RunEveryNMinutes>
+  </Scheduler>
+  <IsReadOnly>false</IsReadOnly>
+</QBWCXML>
+20170206.22:07:58 UTC	: QBWebConnector.WebServiceManager.ReadQWC(QWCReader QWC) : Parsing application configuration xml file to load its content to variables
+20170206.22:08:01 UTC	: QBWebConnector.WebServiceManager.ReadQWC(QWCReader QWC) : Replace existing app with information from .qwc file.
+20170206.22:08:05 UTC	: QBWebConnector.WebServiceManager.ReadQWC(QWCReader QWC) : The application DashOrdersTesting's Service URL is not on a secure (https) server
+
+QBWC1051: The new application was not added
+20170206.22:08:14 UTC	: QBWebConnector.SOAPWebService.ConnectToQB() : Connecting to QuickBooks...
+20170206.22:08:14 UTC	: QBWebConnector.SOAPWebService.ConnectToQB() : Error connecting to QuickBooks. Error message received from QuickBooks was <If the QuickBooks company data file is not open, a call to the "BeginSession" method must include the name of the data file.>.
+20170206.22:08:14 UTC	: QBWebConnector.SOAPWebService.deleteFileIDValueFromQB() : QBWC1078: An error occured while clearing FileID from QuickBooks.
+Reason: Error connecting to QuickBooks. Error message received from QuickBooks was <If the QuickBooks company data file is not open, a call to the "BeginSession" method must include the name of the data file.>.
+20170206.22:09:05 UTC	: QBWebConnector.SOAPWebService.deleteFileIDValueFromQB() : Session ended and connection to QuickBooks closed.
+20170206.22:09:05 UTC	: RemoveApp() : Application DashOrdersTesting cannot be removed.
+20170206.22:09:36 UTC	: QBWebConnector.SOAPWebService.ConnectToQB() : Connecting to QuickBooks...
+20170206.22:09:36 UTC	: QBWebConnector.SOAPWebService.ConnectToQB() : Error connecting to QuickBooks. Error message received from QuickBooks was <If the QuickBooks company data file is not open, a call to the "BeginSession" method must include the name of the data file.>.
+20170206.22:09:36 UTC	: QBWebConnector.SOAPWebService.deleteFileIDValueFromQB() : QBWC1078: An error occured while clearing FileID from QuickBooks.
+Reason: Error connecting to QuickBooks. Error message received from QuickBooks was <If the QuickBooks company data file is not open, a call to the "BeginSession" method must include the name of the data file.>.
+20170206.22:09:39 UTC	: QBWebConnector.SOAPWebService.deleteFileIDValueFromQB() : Session ended and connection to QuickBooks closed.
+20170206.22:09:39 UTC	: RemoveApp() : Application DashOrdersTesting cannot be removed.
+20170206.22:10:25 UTC	: QBWebConnector.SOAPWebService.ConnectToQB() : Connecting to QuickBooks...
+20170206.22:10:25 UTC	: QBWebConnector.SOAPWebService.ConnectToQB() : Error connecting to QuickBooks. Error message received from QuickBooks was <If the QuickBooks company data file is not open, a call to the "BeginSession" method must include the name of the data file.>.
+20170206.22:10:25 UTC	: QBWebConnector.SOAPWebService.deleteFileIDValueFromQB() : QBWC1078: An error occured while clearing FileID from QuickBooks.
+Reason: Error connecting to QuickBooks. Error message received from QuickBooks was <If the QuickBooks company data file is not open, a call to the "BeginSession" method must include the name of the data file.>.
+20170206.22:10:27 UTC	: QBWebConnector.SOAPWebService.deleteFileIDValueFromQB() : Session ended and connection to QuickBooks closed.
+20170206.22:10:27 UTC	: RemoveApp() : Application DashOrdersTesting cannot be removed.
+20170206.22:10:29 UTC	: QBWebConnector.SOAPWebService.ConnectToQB() : Connecting to QuickBooks...
+20170206.22:10:29 UTC	: QBWebConnector.SOAPWebService.ConnectToQB() : Error connecting to QuickBooks. Error message received from QuickBooks was <If the QuickBooks company data file is not open, a call to the "BeginSession" method must include the name of the data file.>.
+20170206.22:10:29 UTC	: QBWebConnector.SOAPWebService.deleteFileIDValueFromQB() : QBWC1078: An error occured while clearing FileID from QuickBooks.
+Reason: Error connecting to QuickBooks. Error message received from QuickBooks was <If the QuickBooks company data file is not open, a call to the "BeginSession" method must include the name of the data file.>.
+20170206.22:10:29 UTC	: QBWebConnector.SOAPWebService.deleteFileIDValueFromQB() : Session ended and connection to QuickBooks closed.
+20170206.22:10:29 UTC	: RemoveApp() : Application DashOrdersTesting cannot be removed.
+20170206.22:11:28 UTC	: QBWebConnector.SOAPWebService.ConnectToQB() : Connecting to QuickBooks...
+20170206.22:11:28 UTC	: QBWebConnector.SOAPWebService.ConnectToQB() : Error connecting to QuickBooks. Error message received from QuickBooks was <If the QuickBooks company data file is not open, a call to the "BeginSession" method must include the name of the data file.>.
+20170206.22:11:28 UTC	: QBWebConnector.SOAPWebService.deleteFileIDValueFromQB() : QBWC1078: An error occured while clearing FileID from QuickBooks.
+Reason: Error connecting to QuickBooks. Error message received from QuickBooks was <If the QuickBooks company data file is not open, a call to the "BeginSession" method must include the name of the data file.>.
+20170206.22:11:29 UTC	: QBWebConnector.SOAPWebService.deleteFileIDValueFromQB() : Session ended and connection to QuickBooks closed.
+20170206.22:11:29 UTC	: RemoveApp() : Application DashOrdersTesting cannot be removed.
+20170206.22:11:32 UTC	: QBWebConnector.SOAPWebService.ConnectToQB() : Connecting to QuickBooks...
+20170206.22:11:32 UTC	: QBWebConnector.SOAPWebService.ConnectToQB() : Error connecting to QuickBooks. Error message received from QuickBooks was <If the QuickBooks company data file is not open, a call to the "BeginSession" method must include the name of the data file.>.
+20170206.22:11:32 UTC	: QBWebConnector.SOAPWebService.deleteFileIDValueFromQB() : QBWC1078: An error occured while clearing FileID from QuickBooks.
+Reason: Error connecting to QuickBooks. Error message received from QuickBooks was <If the QuickBooks company data file is not open, a call to the "BeginSession" method must include the name of the data file.>.
+20170206.22:11:33 UTC	: QBWebConnector.SOAPWebService.deleteFileIDValueFromQB() : Session ended and connection to QuickBooks closed.
+20170206.22:11:33 UTC	: RemoveApp() : Application DashOrdersTesting cannot be removed.
+20170206.22:11:49 UTC	: QBWebConnector.SOAPWebService.ConnectToQB() : Connecting to QuickBooks...
+20170206.22:11:49 UTC	: QBWebConnector.SOAPWebService.ConnectToQB() : Error connecting to QuickBooks. Error message received from QuickBooks was <If the QuickBooks company data file is not open, a call to the "BeginSession" method must include the name of the data file.>.
+20170206.22:11:49 UTC	: QBWebConnector.SOAPWebService.deleteFileIDValueFromQB() : QBWC1078: An error occured while clearing FileID from QuickBooks.
+Reason: Error connecting to QuickBooks. Error message received from QuickBooks was <If the QuickBooks company data file is not open, a call to the "BeginSession" method must include the name of the data file.>.
+20170206.22:11:53 UTC	: QBWebConnector.SOAPWebService.deleteFileIDValueFromQB() : Session ended and connection to QuickBooks closed.
+20170206.22:11:53 UTC	: RemoveApp() : Application DashOrdersTesting cannot be removed.
+20170206.22:12:02 UTC	: QBWebConnector.RegistryManager.setUpdateLock() : HKEY_CURRENT_USER\Software\Intuit\QBWebConnector\UpdateLock has been set to False
+20170206.22:12:02 UTC	: QBWebConnector.RegistryManager.setUpdateLock() : ********************* Update session unlocked *********************
+20170206.22:12:02 UTC	: StopFlexConnector : Object reference not set to an instance of an object.
+20170206.22:12:02 UTC	: StopFlexConnector :    at QBWebConnector.QBWebConnector.StopFlexConnector()
+
+
+Log file initialized at Monday, February 6, 2017 - 10:12 PM UTC  
+Timestamp format used: YYYYMMDD.HH:MM:SS UTC
+QBWebConnector 2.2 has been initialized with its logging status to level = DEBUG.
+Please restart QBWebConnector for any change in log level to take effect. Use file menu to clear log.
+
+20170206.22:12:28 UTC	: QBWebConnector.RegistryManager.setUpdateLock() : HKEY_CURRENT_USER\Software\Intuit\QBWebConnector\UpdateLock has been set to False
+20170206.22:12:28 UTC	: QBWebConnector.RegistryManager.setUpdateLock() : ********************* Update session unlocked *********************
+20170206.22:12:28 UTC	: QBWebConnector.RegistryManager.getValue() : Unable to get from RegistryKey =<HKEY_CURRENT_USER\Software\Intuit\QBWebConnector\SOAPWebServices\DashOrdersTesting> for ValueName=<RequestedVersion>
+20170206.22:12:28 UTC	: QBWebConnector.RegistryManager.getValue() : Reason: Object reference not set to an instance of an object.
+20170206.22:12:28 UTC	: QBWebConnector.RegistryManager.getValue() : Unable to get from RegistryKey =<HKEY_CURRENT_USER\Software\Intuit\QBWebConnector\Scheduler\DashOrdersTesting> for ValueName=<DefaultInterval>
+20170206.22:12:28 UTC	: QBWebConnector.RegistryManager.getValue() : Reason: Object reference not set to an instance of an object.
+20170206.22:12:28 UTC	: QBWebConnector.RegistryManager.getValue() : Unable to get from RegistryKey =<HKEY_CURRENT_USER\Software\Intuit\QBWebConnector\Scheduler\DashOrdersTesting> for ValueName=<MinIntervalInSeconds>
+20170206.22:12:28 UTC	: QBWebConnector.RegistryManager.getValue() : Reason: Object reference not set to an instance of an object.
+20170206.22:12:28 UTC	: QBWebConnector.RegistryManager.setUpdateLock() : HKEY_CURRENT_USER\Software\Intuit\QBWebConnector\UpdateLock has been set to False
+20170206.22:12:28 UTC	: QBWebConnector.RegistryManager.setUpdateLock() : ********************* Update session unlocked *********************
+20170206.22:12:28 UTC	: QBWebConnector_Load() : 
+QuickBooks Web Connector 2.2.0.71 has started.
+Tuesday, February 7, 2017 at 3:42:28 AM
+20170206.22:12:28 UTC	: QBWebConnector_Load() : QBWC Form Loaded
+20170206.22:12:28 UTC	: QWCReader.ParseQWC() : Contents of QWC file: -
+<QBWCXML>
+  <AppName>DashOrdersTesting</AppName>
+  <AppID></AppID>
+  <AppURL>http://35.154.123.8/ci/qb_web_connector/qb_web_connector_import</AppURL>
+  <AppDescription></AppDescription>
+  <AppSupport>http://35.154.123.8/ci/qb_web_connector/qb_web_connector_import</AppSupport>
+  <UserName>DashOrders</UserName>
+  <OwnerID>{a4f138-7848aa8ed0f27e-c-85e16b-ecdbe}</OwnerID>
+  <FileID>{30df36f9f4b7a30-1059b024b3-d0-5c4-73}</FileID>
+  <UserID>{2}</UserID>
+  <QBType>QBFS</QBType>
+  <Scheduler>
+    <RunEveryNMinutes>20</RunEveryNMinutes>
+  </Scheduler>
+  <IsReadOnly>false</IsReadOnly>
+</QBWCXML>
+20170206.22:12:28 UTC	: QBWebConnector.WebServiceManager.ReadQWC(QWCReader QWC) : Parsing application configuration xml file to load its content to variables
+20170206.22:12:37 UTC	: QBWebConnector.WebServiceManager.ReadQWC(QWCReader QWC) : Replace existing app with information from .qwc file.
+20170206.22:12:40 UTC	: QBWebConnector.WebServiceManager.ReadQWC(QWCReader QWC) : The application DashOrdersTesting's Service URL is not on a secure (https) server
+
+QBWC1051: The new application was not added
+20170206.22:12:47 UTC	: QBWebConnector.RegistryManager.setUpdateLock() : HKEY_CURRENT_USER\Software\Intuit\QBWebConnector\UpdateLock has been set to False
+20170206.22:12:47 UTC	: QBWebConnector.RegistryManager.setUpdateLock() : ********************* Update session unlocked *********************
+20170206.22:12:47 UTC	: StopFlexConnector : Object reference not set to an instance of an object.
+20170206.22:12:47 UTC	: StopFlexConnector :    at QBWebConnector.QBWebConnector.StopFlexConnector()
+
+
+Log file initialized at Monday, February 6, 2017 - 10:12 PM UTC  
+Timestamp format used: YYYYMMDD.HH:MM:SS UTC
+QBWebConnector 2.2 has been initialized with its logging status to level = DEBUG.
+Please restart QBWebConnector for any change in log level to take effect. Use file menu to clear log.
+
+20170206.22:12:51 UTC	: QBWebConnector.RegistryManager.setUpdateLock() : HKEY_CURRENT_USER\Software\Intuit\QBWebConnector\UpdateLock has been set to False
+20170206.22:12:51 UTC	: QBWebConnector.RegistryManager.setUpdateLock() : ********************* Update session unlocked *********************
+20170206.22:12:51 UTC	: QBWebConnector.RegistryManager.getValue() : Unable to get from RegistryKey =<HKEY_CURRENT_USER\Software\Intuit\QBWebConnector\SOAPWebServices\DashOrdersTesting> for ValueName=<RequestedVersion>
+20170206.22:12:51 UTC	: QBWebConnector.RegistryManager.getValue() : Reason: Object reference not set to an instance of an object.
+20170206.22:12:51 UTC	: QBWebConnector.RegistryManager.getValue() : Unable to get from RegistryKey =<HKEY_CURRENT_USER\Software\Intuit\QBWebConnector\Scheduler\DashOrdersTesting> for ValueName=<DefaultInterval>
+20170206.22:12:51 UTC	: QBWebConnector.RegistryManager.getValue() : Reason: Object reference not set to an instance of an object.
+20170206.22:12:51 UTC	: QBWebConnector.RegistryManager.getValue() : Unable to get from RegistryKey =<HKEY_CURRENT_USER\Software\Intuit\QBWebConnector\Scheduler\DashOrdersTesting> for ValueName=<MinIntervalInSeconds>
+20170206.22:12:51 UTC	: QBWebConnector.RegistryManager.getValue() : Reason: Object reference not set to an instance of an object.
+20170206.22:12:51 UTC	: QBWebConnector.RegistryManager.setUpdateLock() : HKEY_CURRENT_USER\Software\Intuit\QBWebConnector\UpdateLock has been set to False
+20170206.22:12:51 UTC	: QBWebConnector.RegistryManager.setUpdateLock() : ********************* Update session unlocked *********************
+20170206.22:12:52 UTC	: QBWebConnector_Load() : 
+QuickBooks Web Connector 2.2.0.71 has started.
+Tuesday, February 7, 2017 at 3:42:52 AM
+20170206.22:12:52 UTC	: QBWebConnector_Load() : QBWC Form Loaded
+20170206.22:13:00 UTC	: QBWebConnector.SOAPWebService.ConnectToQB() : Connecting to QuickBooks...
+20170206.22:13:00 UTC	: QBWebConnector.SOAPWebService.ConnectToQB() : Error connecting to QuickBooks. Error message received from QuickBooks was <If the QuickBooks company data file is not open, a call to the "BeginSession" method must include the name of the data file.>.
+20170206.22:13:00 UTC	: QBWebConnector.SOAPWebService.deleteFileIDValueFromQB() : QBWC1078: An error occured while clearing FileID from QuickBooks.
+Reason: Error connecting to QuickBooks. Error message received from QuickBooks was <If the QuickBooks company data file is not open, a call to the "BeginSession" method must include the name of the data file.>.
+20170206.22:13:02 UTC	: QBWebConnector.SOAPWebService.deleteFileIDValueFromQB() : Session ended and connection to QuickBooks closed.
+20170206.22:13:02 UTC	: RemoveApp() : Application DashOrdersTesting cannot be removed.
+20170206.22:13:26 UTC	: QBWebConnector.SOAPWebService.ConnectToQB() : Connecting to QuickBooks...
+20170206.22:13:26 UTC	: QBWebConnector.SOAPWebService.ConnectToQB() : Error connecting to QuickBooks. Error message received from QuickBooks was <If the QuickBooks company data file is not open, a call to the "BeginSession" method must include the name of the data file.>.
+20170206.22:13:26 UTC	: QBWebConnector.SOAPWebService.deleteFileIDValueFromQB() : QBWC1078: An error occured while clearing FileID from QuickBooks.
+Reason: Error connecting to QuickBooks. Error message received from QuickBooks was <If the QuickBooks company data file is not open, a call to the "BeginSession" method must include the name of the data file.>.
+20170206.22:13:27 UTC	: QBWebConnector.SOAPWebService.deleteFileIDValueFromQB() : Session ended and connection to QuickBooks closed.
+20170206.22:13:27 UTC	: RemoveApp() : Application DashOrdersTesting cannot be removed.
+20170206.22:16:16 UTC	: QBWebConnector.RegistryManager.setUpdateLock() : HKEY_CURRENT_USER\Software\Intuit\QBWebConnector\UpdateLock has been set to False
+20170206.22:16:16 UTC	: QBWebConnector.RegistryManager.setUpdateLock() : ********************* Update session unlocked *********************
+20170206.22:16:16 UTC	: StopFlexConnector : Object reference not set to an instance of an object.
+20170206.22:16:16 UTC	: StopFlexConnector :    at QBWebConnector.QBWebConnector.StopFlexConnector()
+
+
+Log file initialized at Monday, February 6, 2017 - 10:19 PM UTC  
+Timestamp format used: YYYYMMDD.HH:MM:SS UTC
+QBWebConnector 2.2 has been initialized with its logging status to level = DEBUG.
+Please restart QBWebConnector for any change in log level to take effect. Use file menu to clear log.
+
+20170206.22:19:04 UTC	: QBWebConnector.RegistryManager.setUpdateLock() : HKEY_CURRENT_USER\Software\Intuit\QBWebConnector\UpdateLock has been set to False
+20170206.22:19:04 UTC	: QBWebConnector.RegistryManager.setUpdateLock() : ********************* Update session unlocked *********************
+20170206.22:19:05 UTC	: QBWebConnector.RegistryManager.getValue() : Unable to get from RegistryKey =<HKEY_CURRENT_USER\Software\Intuit\QBWebConnector\SOAPWebServices\DashOrdersTesting> for ValueName=<RequestedVersion>
+20170206.22:19:05 UTC	: QBWebConnector.RegistryManager.getValue() : Reason: Object reference not set to an instance of an object.
+20170206.22:19:05 UTC	: QBWebConnector.RegistryManager.getValue() : Unable to get from RegistryKey =<HKEY_CURRENT_USER\Software\Intuit\QBWebConnector\Scheduler\DashOrdersTesting> for ValueName=<DefaultInterval>
+20170206.22:19:05 UTC	: QBWebConnector.RegistryManager.getValue() : Reason: Object reference not set to an instance of an object.
+20170206.22:19:05 UTC	: QBWebConnector.RegistryManager.getValue() : Unable to get from RegistryKey =<HKEY_CURRENT_USER\Software\Intuit\QBWebConnector\Scheduler\DashOrdersTesting> for ValueName=<MinIntervalInSeconds>
+20170206.22:19:05 UTC	: QBWebConnector.RegistryManager.getValue() : Reason: Object reference not set to an instance of an object.
+20170206.22:19:05 UTC	: QBWebConnector.RegistryManager.setUpdateLock() : HKEY_CURRENT_USER\Software\Intuit\QBWebConnector\UpdateLock has been set to False
+20170206.22:19:05 UTC	: QBWebConnector.RegistryManager.setUpdateLock() : ********************* Update session unlocked *********************
+20170206.22:19:09 UTC	: QBWebConnector_Load() : 
+QuickBooks Web Connector 2.2.0.71 has started.
+Tuesday, February 7, 2017 at 3:49:09 AM
+20170206.22:19:09 UTC	: QBWebConnector_Load() : QBWC Form Loaded
+
+
+Log file initialized at Monday, February 6, 2017 - 10:41 PM UTC  
+Timestamp format used: YYYYMMDD.HH:MM:SS UTC
+QBWebConnector 2.2 has been initialized with its logging status to level = DEBUG.
+Please restart QBWebConnector for any change in log level to take effect. Use file menu to clear log.
+
+20170206.22:41:51 UTC	: QBWebConnector.RegistryManager.setUpdateLock() : HKEY_CURRENT_USER\Software\Intuit\QBWebConnector\UpdateLock has been set to False
+20170206.22:41:51 UTC	: QBWebConnector.RegistryManager.setUpdateLock() : ********************* Update session unlocked *********************
+20170206.22:41:51 UTC	: QWCReader.ParseQWC() : Contents of QWC file: -
+<QBWCXML>
+  <AppName>DashOrdersTesting</AppName>
+  <AppID></AppID>
+  <AppURL>http://35.154.123.8/ci/qb_web_connector/qb_web_connector_import</AppURL>
+  <AppDescription></AppDescription>
+  <AppSupport>http://35.154.123.8/ci/qb_web_connector/qb_web_connector_import</AppSupport>
+  <UserName>DashOrders</UserName>
+  <OwnerID>{cd8b6fd34aaa85-e878e-fe0-2ec8e1471-b}</OwnerID>
+  <FileID>{069ffd-109f53cb37b04-07-4a33d025-43b}</FileID>
+  <UserID>{2}</UserID>
+  <QBType>QBFS</QBType>
+  <Scheduler>
+    <RunEveryNMinutes>20</RunEveryNMinutes>
+  </Scheduler>
+  <IsReadOnly>false</IsReadOnly>
+</QBWCXML>
+20170206.22:41:51 UTC	: QBWebConnector.WebServiceManager.ReadQWC(QWCReader QWC) : Parsing application configuration xml file to load its content to variables
+20170206.22:41:54 UTC	:  : ~SingleInstanceHandler() - usingInstanceChannel = false. Returning without any Registry key delete or unmarshalling.
+20170206.22:41:55 UTC	: QBWebConnector.SOAPWebService.ConnectToQB() : Connecting to QuickBooks...
+20170206.22:41:56 UTC	: QBWebConnector.SOAPWebService.ConnectToQB() : Error connecting to QuickBooks. Error message received from QuickBooks was <If the QuickBooks company data file is not open, a call to the "BeginSession" method must include the name of the data file.>.
+20170206.22:41:56 UTC	: QBWebConnector.SOAPWebService.deleteFileIDValueFromQB() : QBWC1078: An error occured while clearing FileID from QuickBooks.
+Reason: Error connecting to QuickBooks. Error message received from QuickBooks was <If the QuickBooks company data file is not open, a call to the "BeginSession" method must include the name of the data file.>.
+20170206.22:42:03 UTC	: QBWebConnector.SOAPWebService.deleteFileIDValueFromQB() : Session ended and connection to QuickBooks closed.
+20170206.22:42:03 UTC	: RemoveApp() : Application DashOrdersTesting cannot be removed.
+20170206.22:49:36 UTC	: QBWebConnector.SOAPWebService.ConnectToQB() : Connecting to QuickBooks...
+20170206.22:49:37 UTC	: QBWebConnector.SOAPWebService.ConnectToQB() : Error connecting to QuickBooks. Error message received from QuickBooks was <If the QuickBooks company data file is not open, a call to the "BeginSession" method must include the name of the data file.>.
+20170206.22:49:37 UTC	: QBWebConnector.SOAPWebService.deleteFileIDValueFromQB() : QBWC1078: An error occured while clearing FileID from QuickBooks.
+Reason: Error connecting to QuickBooks. Error message received from QuickBooks was <If the QuickBooks company data file is not open, a call to the "BeginSession" method must include the name of the data file.>.
+20170206.22:49:38 UTC	: QBWebConnector.SOAPWebService.deleteFileIDValueFromQB() : Session ended and connection to QuickBooks closed.
+20170206.22:49:38 UTC	: RemoveApp() : Application DashOrdersTesting cannot be removed.
+20170206.22:49:44 UTC	: QBWebConnector.SOAPWebService.ConnectToQB() : Connecting to QuickBooks...
+20170206.22:49:45 UTC	: QBWebConnector.SOAPWebService.ConnectToQB() : Error connecting to QuickBooks. Error message received from QuickBooks was <If the QuickBooks company data file is not open, a call to the "BeginSession" method must include the name of the data file.>.
+20170206.22:49:45 UTC	: QBWebConnector.SOAPWebService.deleteFileIDValueFromQB() : QBWC1078: An error occured while clearing FileID from QuickBooks.
+Reason: Error connecting to QuickBooks. Error message received from QuickBooks was <If the QuickBooks company data file is not open, a call to the "BeginSession" method must include the name of the data file.>.
+20170206.22:49:47 UTC	: QBWebConnector.SOAPWebService.deleteFileIDValueFromQB() : Session ended and connection to QuickBooks closed.
+20170206.22:49:47 UTC	: RemoveApp() : Application DashOrdersTesting cannot be removed.
+20170207.01:00:11 UTC	: QBWebConnector.RegistryManager.setUpdateLock() : HKEY_CURRENT_USER\Software\Intuit\QBWebConnector\UpdateLock has been set to False
+20170207.01:00:11 UTC	: QBWebConnector.RegistryManager.setUpdateLock() : ********************* Update session unlocked *********************
+20170207.01:00:11 UTC	: StopFlexConnector : Object reference not set to an instance of an object.
+20170207.01:00:11 UTC	: StopFlexConnector :    at QBWebConnector.QBWebConnector.StopFlexConnector()
+
+
+Log file initialized at Tuesday, February 7, 2017 - 4:24 PM UTC  
+Timestamp format used: YYYYMMDD.HH:MM:SS UTC
+QBWebConnector 2.2 has been initialized with its logging status to level = DEBUG.
+Please restart QBWebConnector for any change in log level to take effect. Use file menu to clear log.
+
+20170207.16:24:55 UTC	: QBWebConnector.RegistryManager.setUpdateLock() : HKEY_CURRENT_USER\Software\Intuit\QBWebConnector\UpdateLock has been set to False
+20170207.16:24:55 UTC	: QBWebConnector.RegistryManager.setUpdateLock() : ********************* Update session unlocked *********************
+20170207.16:25:01 UTC	: QBWebConnector.RegistryManager.getValue() : Unable to get from RegistryKey =<HKEY_CURRENT_USER\Software\Intuit\QBWebConnector\SOAPWebServices\DashOrdersTesting> for ValueName=<RequestedVersion>
+20170207.16:25:01 UTC	: QBWebConnector.RegistryManager.getValue() : Reason: Object reference not set to an instance of an object.
+20170207.16:25:01 UTC	: QBWebConnector.RegistryManager.getValue() : Unable to get from RegistryKey =<HKEY_CURRENT_USER\Software\Intuit\QBWebConnector\Scheduler\DashOrdersTesting> for ValueName=<DefaultInterval>
+20170207.16:25:01 UTC	: QBWebConnector.RegistryManager.getValue() : Reason: Object reference not set to an instance of an object.
+20170207.16:25:01 UTC	: QBWebConnector.RegistryManager.getValue() : Unable to get from RegistryKey =<HKEY_CURRENT_USER\Software\Intuit\QBWebConnector\Scheduler\DashOrdersTesting> for ValueName=<MinIntervalInSeconds>
+20170207.16:25:01 UTC	: QBWebConnector.RegistryManager.getValue() : Reason: Object reference not set to an instance of an object.
+20170207.16:25:04 UTC	: QBWebConnector.RegistryManager.setUpdateLock() : HKEY_CURRENT_USER\Software\Intuit\QBWebConnector\UpdateLock has been set to False
+20170207.16:25:04 UTC	: QBWebConnector.RegistryManager.setUpdateLock() : ********************* Update session unlocked *********************
+20170207.16:25:30 UTC	: QBWebConnector_Load() : 
+QuickBooks Web Connector 2.2.0.71 has started.
+Tuesday, February 7, 2017 at 9:55:30 PM
+20170207.16:25:30 UTC	: QBWebConnector_Load() : QBWC Form Loaded
+
+
+Log file initialized at Tuesday, February 7, 2017 - 4:33 PM UTC  
+Timestamp format used: YYYYMMDD.HH:MM:SS UTC
+QBWebConnector 2.2 has been initialized with its logging status to level = DEBUG.
+Please restart QBWebConnector for any change in log level to take effect. Use file menu to clear log.
+
+20170207.16:33:44 UTC	: QBWebConnector.RegistryManager.setUpdateLock() : HKEY_CURRENT_USER\Software\Intuit\QBWebConnector\UpdateLock has been set to False
+20170207.16:33:44 UTC	: QBWebConnector.RegistryManager.setUpdateLock() : ********************* Update session unlocked *********************
+20170207.16:33:44 UTC	: QWCReader.ParseQWC() : Contents of QWC file: -
+<QBWCXML>
+  <AppName>DashOrdersTesting</AppName>
+  <AppID></AppID>
+  <AppURL>http://35.154.123.8/ci/qb_web_connector/qb_web_connector_import</AppURL>
+  <AppDescription></AppDescription>
+  <AppSupport>http://35.154.123.8/ci/qb_web_connector/qb_web_connector_import</AppSupport>
+  <UserName>DashOrders</UserName>
+  <OwnerID>{d1e8708a8bfcba4-83ae4175e28fc6ee---d}</OwnerID>
+  <FileID>{7-544bf613f--b0c034bdf507939d230a03-}</FileID>
+  <UserID>{2}</UserID>
+  <QBType>QBFS</QBType>
+  <Scheduler>
+    <RunEveryNMinutes>20</RunEveryNMinutes>
+  </Scheduler>
+  <IsReadOnly>false</IsReadOnly>
+</QBWCXML>
+20170207.16:33:44 UTC	: QBWebConnector.WebServiceManager.ReadQWC(QWCReader QWC) : Parsing application configuration xml file to load its content to variables
+20170207.16:33:46 UTC	:  : ~SingleInstanceHandler() - usingInstanceChannel = false. Returning without any Registry key delete or unmarshalling.
+20170207.16:33:49 UTC	: QBWebConnector.SOAPWebService.ConnectToQB() : Connecting to QuickBooks...
+20170207.16:33:49 UTC	: QBWebConnector.SOAPWebService.ConnectToQB() : Error connecting to QuickBooks. Error message received from QuickBooks was <If the QuickBooks company data file is not open, a call to the "BeginSession" method must include the name of the data file.>.
+20170207.16:33:49 UTC	: QBWebConnector.SOAPWebService.deleteFileIDValueFromQB() : QBWC1078: An error occured while clearing FileID from QuickBooks.
+Reason: Error connecting to QuickBooks. Error message received from QuickBooks was <If the QuickBooks company data file is not open, a call to the "BeginSession" method must include the name of the data file.>.
+20170207.16:33:50 UTC	: QBWebConnector.SOAPWebService.deleteFileIDValueFromQB() : Session ended and connection to QuickBooks closed.
+20170207.16:33:50 UTC	: RemoveApp() : Application DashOrdersTesting cannot be removed.
+20170207.16:33:54 UTC	: QBWebConnector.SOAPWebService.ConnectToQB() : Connecting to QuickBooks...
+20170207.16:33:54 UTC	: QBWebConnector.SOAPWebService.ConnectToQB() : Error connecting to QuickBooks. Error message received from QuickBooks was <If the QuickBooks company data file is not open, a call to the "BeginSession" method must include the name of the data file.>.
+20170207.16:33:54 UTC	: QBWebConnector.SOAPWebService.deleteFileIDValueFromQB() : QBWC1078: An error occured while clearing FileID from QuickBooks.
+Reason: Error connecting to QuickBooks. Error message received from QuickBooks was <If the QuickBooks company data file is not open, a call to the "BeginSession" method must include the name of the data file.>.
+20170207.16:33:59 UTC	: QBWebConnector.SOAPWebService.deleteFileIDValueFromQB() : Session ended and connection to QuickBooks closed.
+20170207.16:33:59 UTC	: RemoveApp() : Application DashOrdersTesting cannot be removed.
+20170207.16:34:03 UTC	: QBWebConnector.SOAPWebService.ConnectToQB() : Connecting to QuickBooks...
+20170207.16:34:03 UTC	: QBWebConnector.SOAPWebService.ConnectToQB() : Error connecting to QuickBooks. Error message received from QuickBooks was <If the QuickBooks company data file is not open, a call to the "BeginSession" method must include the name of the data file.>.
+20170207.16:34:03 UTC	: QBWebConnector.SOAPWebService.deleteFileIDValueFromQB() : QBWC1078: An error occured while clearing FileID from QuickBooks.
+Reason: Error connecting to QuickBooks. Error message received from QuickBooks was <If the QuickBooks company data file is not open, a call to the "BeginSession" method must include the name of the data file.>.
+20170207.16:34:05 UTC	: QBWebConnector.SOAPWebService.deleteFileIDValueFromQB() : Session ended and connection to QuickBooks closed.
+20170207.16:34:05 UTC	: RemoveApp() : Application DashOrdersTesting cannot be removed.
+
+
+Log file initialized at Tuesday, February 7, 2017 - 5:32 PM UTC  
+Timestamp format used: YYYYMMDD.HH:MM:SS UTC
+QBWebConnector 2.2 has been initialized with its logging status to level = DEBUG.
+Please restart QBWebConnector for any change in log level to take effect. Use file menu to clear log.
+
+20170207.17:32:29 UTC	: QBWebConnector.RegistryManager.setUpdateLock() : HKEY_CURRENT_USER\Software\Intuit\QBWebConnector\UpdateLock has been set to False
+20170207.17:32:29 UTC	: QBWebConnector.RegistryManager.setUpdateLock() : ********************* Update session unlocked *********************
+20170207.17:32:29 UTC	: QWCReader.ParseQWC() : Contents of QWC file: -
+<QBWCXML>
+  <AppName>DashOrdersTesting</AppName>
+  <AppID></AppID>
+  <AppURL>http://35.154.123.8/ci/qb_web_connector/qb_web_connector_import</AppURL>
+  <AppDescription></AppDescription>
+  <AppSupport>http://35.154.123.8/ci/qb_web_connector/qb_web_connector_import</AppSupport>
+  <UserName>DashOrders</UserName>
+  <OwnerID>{e8dbc388-ab84-f70-618-cfe4ae25e1d7ea}</OwnerID>
+  <FileID>{0d3f-f94b3-327bd7-0af3145305b6c009-4}</FileID>
+  <UserID>{2}</UserID>
+  <QBType>QBFS</QBType>
+  <Scheduler>
+    <RunEveryNMinutes>20</RunEveryNMinutes>
+  </Scheduler>
+  <IsReadOnly>false</IsReadOnly>
+</QBWCXML>
+20170207.17:32:29 UTC	: QBWebConnector.WebServiceManager.ReadQWC(QWCReader QWC) : Parsing application configuration xml file to load its content to variables
+20170207.17:32:53 UTC	: QBWebConnector.WebServiceManager.ReadQWC(QWCReader QWC) : Replace existing app with information from .qwc file.
+20170207.17:32:55 UTC	: QBWebConnector.WebServiceManager.ReadQWC(QWCReader QWC) : The application DashOrdersTesting's Service URL is not on a secure (https) server
+
+QBWC1051: The new application was not added
+20170207.17:32:55 UTC	:  : ~SingleInstanceHandler() - usingInstanceChannel = false. Returning without any Registry key delete or unmarshalling.
+20170207.17:32:58 UTC	: QBWebConnector.SOAPWebService.ConnectToQB() : Connecting to QuickBooks...
+20170207.17:32:58 UTC	: QBWebConnector.SOAPWebService.ConnectToQB() : Connected., Session started
+20170207.17:32:58 UTC	: QBWebConnector.SOAPWebService.deleteFileIDValueFromQB() : Deleting FileID value from Company object for the ownerID = {1adc58e2-1a6f-47c4-bae0-f8eb8e7e88d3}
+20170207.17:32:58 UTC	: QBWebConnector.SOAPWebService.deleteFileIDValueFromQB() : XML dump follows: -
+
+<?xml version="1.0"?><?qbxml version="13.0"?><QBXML><QBXMLMsgsRq onError="s......
+
+20170207.17:32:59 UTC	: QBWebConnector.SOAPWebService.registerDataExtInQB() : XML dump follows: -
+
+<?xml version="1.0" ?>
+<QBXML>
+<QBXMLMsgsRs>
+<DataExtDelRs requestID="1" st......
+
+20170207.17:32:59 UTC	: QBWebConnector.SOAPWebService.DisconnectFromQB() : Session ended and connection closed
+20170207.17:32:59 UTC	: QBWebConnector.SOAPWebService.deleteFileIDValueFromQB() : Data extension FileID has been cleared from QuickBooks for owner id.
+20170207.17:32:59 UTC	: RemoveApp() : Application DashOrdersTesting has been removed.
+20170207.17:33:51 UTC	: QBWebConnector.RegistryManager.setUpdateLock() : HKEY_CURRENT_USER\Software\Intuit\QBWebConnector\UpdateLock has been set to False
+20170207.17:33:51 UTC	: QBWebConnector.RegistryManager.setUpdateLock() : ********************* Update session unlocked *********************
+20170207.17:33:51 UTC	: StopFlexConnector : Object reference not set to an instance of an object.
+20170207.17:33:51 UTC	: StopFlexConnector :    at QBWebConnector.QBWebConnector.StopFlexConnector()
+
+
+Log file initialized at Tuesday, February 7, 2017 - 5:33 PM UTC  
+Timestamp format used: YYYYMMDD.HH:MM:SS UTC
+QBWebConnector 2.2 has been initialized with its logging status to level = DEBUG.
+Please restart QBWebConnector for any change in log level to take effect. Use file menu to clear log.
+
+20170207.17:33:56 UTC	: QBWebConnector.RegistryManager.setUpdateLock() : HKEY_CURRENT_USER\Software\Intuit\QBWebConnector\UpdateLock has been set to False
+20170207.17:33:56 UTC	: QBWebConnector.RegistryManager.setUpdateLock() : ********************* Update session unlocked *********************
+20170207.17:33:56 UTC	: QBWebConnector.RegistryManager.setUpdateLock() : HKEY_CURRENT_USER\Software\Intuit\QBWebConnector\UpdateLock has been set to False
+20170207.17:33:56 UTC	: QBWebConnector.RegistryManager.setUpdateLock() : ********************* Update session unlocked *********************
+20170207.17:33:57 UTC	: QBWebConnector_Load() : 
+QuickBooks Web Connector 2.2.0.71 has started.
+Tuesday, February 7, 2017 at 11:03:57 PM
+20170207.17:33:57 UTC	: QBWebConnector_Load() : QBWC Form Loaded
+20170207.17:33:57 UTC	: QWCReader.ParseQWC() : Contents of QWC file: -
+<QBWCXML>
+  <AppName>DashOrdersTesting</AppName>
+  <AppID></AppID>
+  <AppURL>http://35.154.123.8/ci/qb_web_connector/qb_web_connector_import</AppURL>
+  <AppDescription></AppDescription>
+  <AppSupport>http://35.154.123.8/ci/qb_web_connector/qb_web_connector_import</AppSupport>
+  <UserName>DashOrders</UserName>
+  <OwnerID>{efd28afe0874dace186838e-4ebac---5b17}</OwnerID>
+  <FileID>{475b00--93dc9-f3710dbab-f32f30436405}</FileID>
+  <UserID>{2}</UserID>
+  <QBType>QBFS</QBType>
+  <Scheduler>
+    <RunEveryNMinutes>20</RunEveryNMinutes>
+  </Scheduler>
+  <IsReadOnly>false</IsReadOnly>
+</QBWCXML>
+20170207.17:33:57 UTC	: QBWebConnector.WebServiceManager.ReadQWC(QWCReader QWC) : Parsing application configuration xml file to load its content to variables
+20170207.17:33:58 UTC	: QBWebConnector.WebServiceManager.ReadQWC(QWCReader QWC) : The application DashOrdersTesting's Service URL is not on a secure (https) server
+
+QBWC1051: The new application was not added
+20170207.17:34:49 UTC	: QWCReader.ParseQWC() : Contents of QWC file: -
+<QBWCXML>
+  <AppName>DashOrdersTesting</AppName>
+  <AppID></AppID>
+  <AppURL>https://www.keyblanks.biz/NaviShip12/docs/web_connector/qb_web_connector_import.php</AppURL>
+  <AppDescription></AppDescription>
+  <AppSupport>https://www.keyblanks.biz/NaviShip12/docs/web_connector/qb_web_connector_import.php</AppSupport>
+  <UserName>DashOrders</UserName>
+  <OwnerID>{1adc58e2-1a6f-47c4-bae0-f8eb8e7e88d3}</OwnerID>
+  <FileID>{332df5d9-6750-4303-b30f-44ac97b1b0f0}</FileID>
+  <QBType>QBFS</QBType>
+  <Scheduler>
+    <RunEveryNMinutes>20</RunEveryNMinutes>
+  </Scheduler>
+  <IsReadOnly>false</IsReadOnly>
+</QBWCXML>
+20170207.17:34:49 UTC	: QBWebConnector.WebServiceManager.ReadQWC(QWCReader QWC) : Parsing application configuration xml file to load its content to variables
+20170207.17:34:50 UTC	:  : QBWC1048: QuickBooks Web Connector could not verify the web application server certificate.
+
+
+Certificate URL: https://www.keyblanks.biz/NaviShip12/docs/web_connector/qb_web_connector_import.phpStackTrace:
+   at System.Net.HttpWebRequest.GetResponse()
+   at QBWebConnector.QWCReader.CheckCertURL()
+
+Message (description of the exception):
+The remote server returned an error: (404) Not Found.
+
+Source (name of application or object that caused the exception):
+System
+
+TargetSite (method that threw the exception):
+System.Net.WebResponse GetResponse()
+
+InnerException:
+
+
+
+20170207.17:34:56 UTC	: QBWebConnector.WebServiceManager.ReadQWC(QWCReader QWC) : QBWC1048: QuickBooks Web Connector could not verify the web application server certificate.
+
+QBWC1051: The new application was not added
+20170207.17:35:38 UTC	: QWCReader.ParseQWC() : Contents of QWC file: -
+<QBWCXML>
+  <AppName>DashOrdersTesting1</AppName>
+  <AppID></AppID>
+  <AppURL>http://35.154.123.8/ci/application/libraries/docs/web_connector/qb_web_connector_import.php</AppURL>
+  <AppDescription></AppDescription>
+  <AppSupport>http://35.154.123.8/ci/application/libraries/docs/web_connector/qb_web_connector_import.php</AppSupport>
+  <UserName>DashOrders</UserName>
+  <OwnerID>{ad-c8-cbedb138a5ae-e747816ffe20e84-8}</OwnerID>
+  <FileID>{2f0933b6-b-79333-f5b0a4-057d0dc044f1}</FileID>
+  <UserID>{2}</UserID>
+  <QBType>QBFS</QBType>
+  <Scheduler>
+    <RunEveryNMinutes>20</RunEveryNMinutes>
+  </Scheduler>
+  <IsReadOnly>false</IsReadOnly>
+</QBWCXML>
+20170207.17:35:38 UTC	: QBWebConnector.WebServiceManager.ReadQWC(QWCReader QWC) : Parsing application configuration xml file to load its content to variables
+20170207.17:35:51 UTC	: QBWebConnector.WebServiceManager.ReadQWC(QWCReader QWC) : The application DashOrdersTesting1's Service URL is not on a secure (https) server
+
+QBWC1051: The new application was not added
+20170207.17:35:55 UTC	: QBWebConnector.RegistryManager.setUpdateLock() : HKEY_CURRENT_USER\Software\Intuit\QBWebConnector\UpdateLock has been set to False
+20170207.17:35:55 UTC	: QBWebConnector.RegistryManager.setUpdateLock() : ********************* Update session unlocked *********************
+20170207.17:35:55 UTC	: StopFlexConnector : Object reference not set to an instance of an object.
+20170207.17:35:55 UTC	: StopFlexConnector :    at QBWebConnector.QBWebConnector.StopFlexConnector()
+
+
+Log file initialized at Tuesday, February 7, 2017 - 6:21 PM UTC  
+Timestamp format used: YYYYMMDD.HH:MM:SS UTC
+QBWebConnector 2.2 has been initialized with its logging status to level = DEBUG.
+Please restart QBWebConnector for any change in log level to take effect. Use file menu to clear log.
+
+20170207.18:21:05 UTC	: QBWebConnector.RegistryManager.setUpdateLock() : HKEY_CURRENT_USER\Software\Intuit\QBWebConnector\UpdateLock has been set to False
+20170207.18:21:05 UTC	: QBWebConnector.RegistryManager.setUpdateLock() : ********************* Update session unlocked *********************
+20170207.18:21:05 UTC	: QBWebConnector.RegistryManager.setUpdateLock() : HKEY_CURRENT_USER\Software\Intuit\QBWebConnector\UpdateLock has been set to False
+20170207.18:21:05 UTC	: QBWebConnector.RegistryManager.setUpdateLock() : ********************* Update session unlocked *********************
+20170207.18:21:06 UTC	: QBWebConnector_Load() : 
+QuickBooks Web Connector 2.2.0.71 has started.
+Tuesday, February 7, 2017 at 11:51:06 PM
+20170207.18:21:06 UTC	: QBWebConnector_Load() : QBWC Form Loaded
+20170207.18:21:06 UTC	: QWCReader.ParseQWC() : Contents of QWC file: -
+<QBWCXML>
+  <AppName>DashOrdersTesting</AppName>
+  <AppID></AppID>
+  <AppURL>http://35.154.123.8/ci/ShipStation7/docs/web_connector/qb_web_connector_import.php</AppURL>
+  <AppDescription></AppDescription>
+  <AppSupport>http://35.154.123.8/ci/ShipStation7/docs/web_connector/qb_web_connector_import.php</AppSupport>
+  <UserName>DashOrders</UserName>
+  <OwnerID>{a77e834b-801facdbaee-e8ef2518-8-d64c}</OwnerID>
+  <FileID>{03f7d41030b552-4943a3b-c7-630ffd0-b9}</FileID>
+  <UserID>{2}</UserID>
+  <QBType>QBFS</QBType>
+  <Scheduler>
+    <RunEveryNMinutes>20</RunEveryNMinutes>
+  </Scheduler>
+  <IsReadOnly>false</IsReadOnly>
+</QBWCXML>
+20170207.18:21:06 UTC	: QBWebConnector.WebServiceManager.ReadQWC(QWCReader QWC) : Parsing application configuration xml file to load its content to variables
+20170207.18:21:07 UTC	: QBWebConnector.WebServiceManager.ReadQWC(QWCReader QWC) : The application DashOrdersTesting's Service URL is not on a secure (https) server
+
+QBWC1051: The new application was not added

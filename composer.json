@@ -1,0 +1,11 @@
+{
+  "require": {
+  "php": ">=5.5",
+  "ext-curl": "*",
+  "authorizenet/authorizenet": "1.9.2",
+    "dawson/youtube": "^2.0",
+    "alaouy/youtube": "dev-master",
+    "graham-campbell/flysystem": "^3.7",
+    "league/flysystem-aws-s3-v3": "~1.0"
+  }
+}

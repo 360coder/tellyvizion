@@ -1,0 +1,6 @@
+{
+    "require": {
+        "alaouy/youtube": "dev-master",
+        "dawson/youtube": "^2.0"
+    }
+}

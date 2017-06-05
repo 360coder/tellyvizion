@@ -1,0 +1,10 @@
+#paypal-con {
+    padding-top: 1em;
+}
+#paypal-con > div {
+    float: right;
+}
+#paypal-con form {
+    display: inline;
+    margin: 0 15px 0 -10px;
+}

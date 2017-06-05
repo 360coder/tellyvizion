@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Facebook Style Cover Page Reposition using jQuery & PHP - demo by w3lessons</title>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+ <script src="jquery.form.min.js"></script>
+    <link href="style.css" rel="stylesheet">
+<script type="text/javascript">
+function repositionCover() {
+    $('.cover-wrapper').hide();
+    $('.cover-resize-wrapper').show();
+    $('.cover-resize-buttons').show();
+    $('.default-buttons').hide();
+    $('.screen-width').val($('.cover-resize-wrapper').width());
+    $('.cover-resize-wrapper img')
+    .css('cursor', 's-resize')
+    .draggable({
+        scroll: false,
+        
+        axis: "y",
+        
+        cursor: "s-resize",
+        
+        drag: function (event, ui) {
+            y1 = $('.timeline-header-wrapper').height();
+            y2 = $('.cover-resize-wrapper').find('img').height();
+            
+            if (ui.position.top >= 0) {
+                ui.position.top = 0;
+            }
+            else
+            if (ui.position.top <= (y1-y2)) {
+                ui.position.top = y1-y2;
+            }
+        },
+        
+        stop: function(event, ui) {
+            $('input.cover-position').val(ui.position.top);
+        }
+    });
+}
+
+function saveReposition() {
+    
+    if ($('input.cover-position').length == 1) {
+        posY = $('input.cover-position').val();
+        $('form.cover-position-form').submit();
+    }
+}
+
+function cancelReposition() {
+    $('.cover-wrapper').show();
+    $('.cover-resize-wrapper').hide();
+    $('.cover-resize-buttons').hide();
+    $('.default-buttons').show();
+    $('input.cover-position').val(0);
+    $('.cover-resize-wrapper img').draggable('destroy').css('cursor','default');
+}
+
+
+ $(function(){
+    $('.cover-resize-wrapper').height($('.cover-resize-wrapper').width()*0.3);
+
+    $('form.cover-position-form').ajaxForm({
+        url:  'c.php',
+        dataType:  'json', 
+        beforeSend: function() {
+            $('.cover-progress').html('Repositioning...').fadeIn('fast').removeClass('hidden');
+        },
+        
+        success: function(responseText) {
+            if ((responseText.status) == 200) {
+                $('.cover-wrapper img')
+                    .attr('src', responseText.url + '?' + new Date().getTime())
+                    .load(function () {
+                        $('.cover-progress').fadeOut('fast').addClass('hidden').html('');
+                        $('.cover-wrapper').show();
+                        $('.cover-resize-wrapper')
+                            .hide()
+                            .find('img').css('top', 0);
+                        $('.cover-resize-buttons').hide();
+                        $('.default-buttons').show();
+                        $('input.cover-position').val(0);
+                        $('.cover-resize-wrapper img').draggable('destroy').css('cursor','default');
+                    });
+            }
+        }
+    });
+});  
+
+
+</script>
+</head>
+<body>
+    <div class="header-wrapper" name="top">
+    <div class="header-content">
+
+        <div class="float-left">
+            <table border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td class="header-site-logo" align="left" valign="top">
+                    <a href="http://w3lessons.info">
+                        <span style="font-size:24px;">W3lessons</span>
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div></div>
+
+    	    <div class="page-wrapper">
+    <div class="timeline-header-wrapper">
+
+ <div class="cover-container">
+        <div class="cover-wrapper">
+            <img src="cover.jpg" alt="w3lessons.info">
+            <div class="cover-progress"></div>
+        </div>
+        
+        <div class="cover-resize-wrapper">
+            <img src="original.jpg" alt="w3lessons.info">
+            <div class="drag-div" align="center">Drag to reposition</div>
+            <div class="cover-progress"></div>
+        </div>
+
+                <div class="avatar-wrapper">
+            <img class="avatar" src="http://w3lessons.info/logo.png" alt="w3lessons.info">
+                        <div class="avatar-change-wrapper">
+            </div>
+            </div>
+                    <div class="timeline-name-wrapper">
+            <a href="https://www.facebook.com/w3lessons.info" target="_blank">
+                W3lessons        </a>
+                    </div>
+
+</div>
+
+    <div class="timeline-statistics-wrapper">
+        <table border="0" width="100%" cellpadding="0" cellspacing="0">
+        <tr>
+                <td class="statistic" align="center" valign="middle">
+                <a href="https://www.facebook.com/w3lessons.info" target="_blank">
+                    1600+ Likes
+                </a>
+            </td>
+                        <td class="statistic" align="center" valign="middle">
+                <a href="http://w3lessons.info/newsletter/">
+                    9000+ Subscribers
+                </a>
+            </td>
+            <td class="statistic" align="center" valign="middle">
+                <a href="http://w3lessons.info/newsletter/">
+                    10000+ Page Views/day
+                </a>
+            </td>
+            <td class="statistic" align="center" valign="middle">
+                <a href="http://w3lessons.info/newsletter/">
+                    5000+ Visitors/day
+                </a>
+            </td>
+        </tr>
+        </table>
+    </div>
+
+<div class="float-left span35">
+        <div class="timeline-buttons cover-resize-buttons">
+<br><br>
+        <table border="0" width="100%" cellspacing="0" cellpadding="0">
+        <tr>
+            <td align="center" valign="middle">
+                <a onclick="saveReposition();">Save Position</a>
+            </td>
+            <td align="center" valign="middle">
+                <a onclick="cancelReposition();">Cancel</a>
+            </td>
+        </tr>
+        </table>
+        <form class="cover-position-form hidden" method="post">
+            <input class="cover-position" name="pos" value="0" type="hidden">
+        </form>
+    </div>
+
+<div class="timeline-buttons default-buttons">
+<br><br>
+        <table border="0" width="150" cellspacing="0" cellpadding="0">
+        <tr>
+            <td align="center" valign="middle">
+                <a onclick="repositionCover();">Reposition cover</a>
+            </td>
+        </tr>
+        </table>
+    </div>
+</div>
+</div>
+
+<center>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-5104998679826243";
+/* mysite_indivi */
+google_ad_slot = "0527018651";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</center>
+</div>
+
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=itzurkarthi"></script>
+<script type="text/javascript">
+  addthis.layers({
+    'theme' : 'dark', 
+    'follow' : {},  
+    'whatsnext' : {},  
+    'recommended' : {
+      'title': 'Recommended for you:'
+    } 
+  });
+</script>
+<!-- AddThis Smart Layers END -->
+
+<!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_floating_style addthis_counter_style" style="left:10px;top:150px;">
+<a class="addthis_button_facebook_like" fb:like:layout="box_count"></a>
+<a class="addthis_button_tweet" tw:count="vertical"></a>
+<a class="addthis_button_google_plusone" g:plusone:size="tall"></a>
+<a class="addthis_counter"></a>
+</div>
+
+
+</body>
+</html>

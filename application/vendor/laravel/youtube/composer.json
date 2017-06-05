@@ -1,0 +1,5 @@
+{
+    "require": {
+        "dawson/youtube": "^2.0"
+    }
+}

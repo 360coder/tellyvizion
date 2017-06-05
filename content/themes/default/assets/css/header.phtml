@@ -1,0 +1,533 @@
+<?php
+/**
+ * Magento
+ *
+ * @category    design
+ * @package     meigeetheme_default
+ * @copyright   Copyright (c) 2010-2014 MeigeeTeam. (http://www.meigeeteam.com)
+ */
+/**
+ * @var Mage_Page_Block_Html_Header $this
+ */
+?>
+<?php
+	$meigee_blacknwhite_general = MAGE::helper('ThemeOptionsBlacknwhite')->getThemeOptionsBlacknwhite('meigee_blacknwhite_general');
+	$customlogo = $meigee_blacknwhite_general['customlogo'];
+	$mediaurl = MAGE::helper('ThemeOptionsBlacknwhite')->getThemeOptionsBlacknwhite('mediaurl');
+	$loginAjaxStatus = $meigee_blacknwhite_general['loginajax']['status'];
+	$customer = Mage::getSingleton('customer/session');
+	$stickyStatus = $meigee_blacknwhite_general['header']['floatingheader'];
+	$stickyClose = $meigee_blacknwhite_general['header']['floatingheader_close'];
+	$stickyTime = $meigee_blacknwhite_general['header']['floatingheader_time'];
+	$stickyCookie = Mage::getModel('core/cookie')->get("blacknwhiteSticky");
+	$stickyOptions = $meigee_blacknwhite_general['header']['floatingheader_options'];
+	$toplinks = $meigee_blacknwhite_general['toplinks'];
+	
+/*	echo "<pre>";
+	print_r($toplinks);
+	echo "</pre>";*/
+?>
+<style type="text/css">
+table#tablehovermob {display: none;}
+header#header h2.logo {background: transparent; background-color: transparent;}
+.opc-index-index .discount-form .buttons-set {
+    float: none;
+    border: none;
+}
+.opc-index-index #checkout-review-submit {
+    text-align: center;
+}
+.button.btn-proceed-checkout.btn-checkout::after {
+    content: "For Paypal click Proceed to checkout";
+   font:12px/1.5em Arial,Helvetica,sans-serif;
+    left: -60px;
+    margin: auto;
+    position: absolute;
+    right: auto;
+    top: 35px;
+    white-space: nowrap;
+    text-transform: uppercase;
+}
+button.button span {height: 32px; background: none;}
+.cart-table .buttons-row button.btn-continue span, .my-wishlist .buttons-set .btn-update span {background-color: #fff!important;}
+button.button span span {
+    background-image: none;
+    background-color: #f25f71;
+    border-radius: 2px;
+    line-height: 26px !important;
+    border: 1px solid #fff!Important;
+    outline: 4px solid #f25f71!important;
+    height: auto!important;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.cart .totals .checkout-types li:first-child {
+    position: relative;
+}
+.video-maindiv {
+    float: left;
+    margin: 1%;
+    width: 46%;
+}
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+#newsletter-validate-detail button.button span span {background-color: none!important;}
+.video-faq {
+	width: 100%;
+	float: left;
+}
+.price-boxnew .old-price, .price-box .old-price {
+	display: block !important;
+}
+p.old-price span {
+    float: left;
+    padding: 0;
+    width: 50%;
+      line-height: normal !important;
+}
+h2.logo a img {
+    width: auto!important;
+}
+#checkout-review-submit h5 span.price {margin-left: 10px; line-height: normal;}
+header#header #search_mini_form {width: 107px;}
+header#header .form-search input, .blog-search .input-text, .block-blog-archives select {width: 70px; font-size: 10px;}
+.topline .nav-container li.level-top > a span {padding: 0.75em 14px;}
+.topline .nav-container {
+    width:100%;
+}
+#header .block.block-list.block-compare {
+    position: absolute;
+    right: 0;
+    top: 25px;
+}
+#header .block-content ol {
+    border-bottom: 1px solid #bfbfbf;
+    border-left: 1px solid #bfbfbf;
+    border-top: 1px solid #bfbfbf;
+    height: 60px;
+    overflow-y: scroll;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-top: 5px;
+    margin-top: 10px;
+    text-align: left;
+}
+#header .block-content ol li {
+    position: relative;
+}
+#header .block-content ol li i {
+    font-size: 8px;
+    font-weight: normal;
+    position: absolute;
+    top: 5px;
+}
+#header p.product-name {
+    padding-left: 11px;
+}
+#header .block-compare li.item .btn-remove {margin-top: 0;}
+#header .actions a, #header .actions button span span {
+    background: #292d2e none repeat scroll 0 0;
+    color: #fff;
+    font-family: arial;
+    font-size: 10px;
+    line-height: normal;
+    
+    text-transform: capitalize;
+    letter-spacing: normal;
+   
+    margin-right: 1px;
+   
+}
+#header .actions a {
+	padding: 2px 5px;
+	float: left;
+}
+#header button.button span span {
+	padding: 2px 5px
+}
+.page-popup .bottomcheckbox , #product_comparison tbody#short tr:first-child{
+	display: none;
+}
+.products-grid .product-buttons a {
+    color: #F15F71;
+    margin-left: 0;
+    font-size: 12px;
+}
+
+.products-grid .product-buttons {
+    text-align: center;
+}
+.products-grid .price-box {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+a.link-compare {
+   
+    color: #2196B2;
+    float: left;
+    margin-left: 5px;
+    padding: 9px 12px;
+    font-family: "motiva_sansregular";
+    font-size: 12px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+
+.page-popup #product_comparison tr.product-shop-row.first.odd {text-align: center;}
+.page-popup .product-name {
+    padding: 10px 10px 0;
+    text-align: center;
+}
+
+/*** radio ***/
+
+
+
+
+.radio-special label {
+    display: inline;
+}
+.radio-main {
+    margin-bottom: 10px;
+    position: relative;
+    height: 45px;
+    width: 100%;
+    float: left;
+}
+.radio-main span {
+    left: 11px;
+    position: absolute;
+    top: 10px;
+}
+
+.regular-radio {
+    display: none;
+}
+.regular-radio + label {
+   background: #edebeb;
+	border: 1px solid #edebeb;
+    border-radius: 2px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), 0 -15px 10px -12px rgba(0, 0, 0, 0.05) inset;
+    display: inline-block;
+    padding: 9px;
+    position: relative;
+}
+.regular-radio:checked + label::after {
+    background:#f15f71;
+ 
+    
+    content: " ";
+    font-size: 32px;
+    height: 12px;
+    left: 3px;
+    position: absolute;
+    top: 3px;
+    width: 12px;
+}
+.regular-radio:checked + label {
+    background-color: #f15f71;
+    border: 1px solid #f15f71;
+   
+}
+.regular-radio:checked + label + span {
+	 color: #fff;
+}
+.regular-radio + label:active, .regular-radio:checked + label:active {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1) inset;
+}
+.big-radio + label {
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.big-radio:checked + label::after {
+   height: 32px;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+ #main-quiz-holder {box-shadow: none!important;}
+
+.radio-special .btnPrev{color: #fff;}
+.btnShowResult {padding-right: 24px!important; padding-left: 0!important; color: #fff;}
+.questionContainer .prev, .questionContainer .next {text-shadow: none!important; box-shadow: none!important;background: #f25f71 !important;}
+#main-quiz-holder #progressKeeper {
+     background: #e3e0e0 none repeat scroll 0 0;
+    border: 1px solid #e3e0e0;
+    box-shadow: none;
+     border-radius: 30px;
+     bottom: 20px;
+}
+a.btnPrev {color: #fff!important;}
+#main-quiz-holder #progress {height: 8px;}
+#main-quiz-holder {border:1px solid #e7d037;}
+.questionContainer .question, h2.qTitle {background: #e7d037; margin: 0 -20px 20px!important; padding: 5px 0; text-align: center; color: #fff;}
+.questionContainer {padding: 0 20px!important; min-height: 430px!important;}
+#main-quiz-holder #notice {
+    bottom: 57px;
+    left: 0;
+    margin: auto;
+    right: 0;
+    text-align: center;
+    width: 100%;
+}
+/*#checkout-payment-method-load > dt:first-child {
+    display: none;
+}
+#payment_form_verisign,#payment_form_paypaluk_express {display: block!important;}*/
+
+#footer .container_12 {background-position: center top;}
+.footer-links h2 {
+    text-align: left; color: rgb(33,150,178);
+    text-transform: capitalize;
+}
+#footer.default-footer .footer-links ul.links li::before,#footer .footer-links li::before {content: none;}
+#footer.default-footer .footer-links ul.links li a {
+    margin: 0;
+    padding: 0;
+}
+#footer.default-footer .footer-links ul.links li {
+    list-style: outside none none;
+    padding: 0;
+}
+.social-links > li, .social-links > li a {
+    float: left;
+    padding: 0 !important;
+}
+ul.social-links {left: -55px;}
+#footer address {
+    font-size: 15px;
+}
+#newsletter-validate-detail label {float: left; font-size: 1.33em; margin-bottom: 0.57em;}
+#footer button.button{float: right;}
+body {background-image: none!important;}
+#footer.default-footer .footer-links ul.social-links li {
+    display: block !important;
+    padding: 0 !important;
+    margin-left: 96px!important;
+}
+#nav-wide.nav-wide {text-align: center!important;}
+
+@media screen and (max-width: 767px) {
+table.data-table td a.product-image img {
+    display: block;
+    margin: 10px auto;
+    width: auto !important;
+}
+#header .block.block-list.block-compare {
+	position: relative;
+	z-index: 100;
+	width: 100%;
+	float: left;
+	top: 0;
+}
+#header .actions a {display: inline-block; float: none;}
+
+header#header .grid_7 .links, header#header .grid_5 .links {
+  
+    height: auto;
+    visibility: visible;
+ 
+}
+header#header .menu-button {width: 100%; float: left; }
+.nav-container.mobile {top: 145px;}
+#header ul.links {
+    width: 100%;
+}
+#header ul.links li {
+    display: inline-block;
+    width: auto;
+    float: none;
+}
+header#header h2.logo {margin-top: 20px;}
+header#header .links li a.top-link-wishlist {
+    background: transparent none repeat scroll 0 0 !important;
+    font-size: 13px !important;
+    line-height: normal !important;
+    padding: 0 3px !important;
+    width: auto !important;
+}
+
+
+}
+
+
+
+
+
+@media screen and (max-width: 433px){
+
+.home-photo-feed div {  text-align: center !important;}
+.home-photo-feed div img {    max-width: 50px;    width: 19%; }
+.video-maindiv {width: 100%;}
+
+
+}
+
+
+
+@media screen and (max-width: 400px) {
+
+
+
+#search_mini_form .form-search {margin-top: 0 !important;}
+}
+
+header#header .links li a.top-link-wishlist {
+    display: none !important;
+}
+.products-grid li {
+   min-height: 300px;
+   padding-bottom: 80px !important;
+   position: relative;
+}
+.products-grid .product-buttons {
+   bottom: 30px;
+   left: 0;
+   margin: auto;
+   position: absolute;
+   right: 0;
+}
+</style>
+<div class="header-wrapper <?php if($stickyStatus){echo str_replace(',', ' ', $stickyOptions);} ?>">
+	<header id="header"<?php if($stickyStatus and substr_count($stickyOptions, 'sticky-logo') == 0){echo ' class="no-sticky-logo"';} ?>>
+    <div class="topmost">
+		<div class="container_12">
+			<div class="grid_12"  >
+              <div class="grid_5 alpha"    >
+              <!--<div class="clear"></div>-->
+                    <?php  echo $this->getLayout()->createBlock('cms/block')->setBlockId('header_top')->toHtml() ?>
+              
+              </div>
+           
+                    <div class="grid_7 omega"    >
+                     
+		 
+						<?php
+							$strTokens = explode('<li', $this->getChildHtml('topLinks'));
+							foreach($strTokens as $key => $token){
+								if(strpos($token, 'top-link-wishlist')){
+									if (Mage::app()->getStore()->isCurrentlySecure()){
+										$strTokens[$key] = str_replace('http:', 'https:', $strTokens[$key]);
+									}else{
+										$strTokens[$key] = str_replace('https:', 'http:', $strTokens[$key]);
+									}
+								}
+							}
+							$topLinks = implode('<li', $strTokens);
+							echo $topLinks;
+						?>
+			 
+				</div>
+			</div>
+			<div class="clear"></div>
+            <div class="grid_12">
+             
+            <div class="grid_4 push_2"  >
+				<?php if ($customlogo['logo_status'] == 0): ?>
+					<h2 class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><img src="<?php echo $this->getLogoSrc() ?>" <?php echo MAGE::helper('ThemeOptionsBlacknwhite/Retina')->getRetinaData('logo'); ?> alt="<?php echo $this->getLogoAlt() ?>" /></a></h2>
+					<?php else:?>
+					<h2 class="logo"><strong><?php echo $customlogo['logo_alt']; ?></strong><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $customlogo['logo_alt']; ?>" class="logo"><img src="<?php echo $mediaurl.$customlogo['logo']; ?>" <?php echo MAGE::helper('ThemeOptionsBlacknwhite/Retina')->getRetinaData('logo_custom'); ?> alt="<?php echo $customlogo['logo_alt']; ?>" /></a></h2>
+				<?php endif; ?>
+            </div>
+    <?php //echo $this->getLayout()->createBlock('core/template')->setTemplate('catalog/product/compare/sidebar.phtml')->tohtml();?>
+
+            </div>
+		</div>
+           </div>
+		<div class="topline<?php if($stickyClose){echo ' sticky-close-box';} ?>">
+			<div class="container_12">
+				<div class="grid_12">
+					<?php if ($customlogo['small_logo_status'] == 0): ?>
+						<h2 class="small_logo"><strong><?php echo $this->getLogoAlt() ?></strong><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="small-logo"><img src="<?php echo $this->getSkinUrl('images/small_logo.png') ?>" <?php echo MAGE::helper('ThemeOptionsBlacknwhite/Retina')->getRetinaData('small_logo'); ?> alt="<?php echo $this->getLogoAlt() ?>" /></a></h2>
+						<?php else:?>
+						<h2 class="small_logo"><strong><?php echo $customlogo['logo_alt']; ?></strong><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $customlogo['logo_alt']; ?>" class="small-logo"><img src="<?php echo $mediaurl.$customlogo['small_logo']; ?>" <?php echo MAGE::helper('ThemeOptionsBlacknwhite/Retina')->getRetinaData('small_logo_custom'); ?> alt="<?php echo $customlogo['logo_alt']; ?>" /></a></h2>
+					<?php endif; ?>
+					<?php echo $this->getChildHtml('topMenu') ?>
+					<div class="menu-button"><?php echo MAGE::helper('ThemeOptionsBlacknwhite')->getIcon('mobilemenu'); ?><span><?php echo $this->__('Start Shopping'); ?></span></div>
+					<span class="wishlist-items"><?php echo $this->helper('wishlist')->getItemCount() ?></span>
+					<?php echo $this->getChildHtml('cart_sidebar') ?>
+					<?php if($stickyClose): ?>
+					<a href="javascript:void(0);" class="sticky-close"><i class="fa fa-times"></i></a>
+					<?php endif; ?>
+					<div class="clear"></div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+     
+	</header>
+</div>
+<!-- <?php echo Mage::app()->getWebsite()->getId(); ?> Website ID -->
+<?php if (Mage::getSingleton('cms/page')->getIdentifier() == 'home' && Mage::app()->getFrontController()->getRequest()->getRouteName() == 'cms'): ?>
+	<?php if ($static_html = $this->getChildHtml('blacknwhite_home_text_blocks')): ?>
+		<div class="home-text-blocks">
+			<div class="container_12">
+				<div class="grid_12">
+					<?php echo $static_html; ?>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="clear"></div>
+		</div>
+	<?php endif; ?>
+<?php endif; ?>
+<?php echo $this->getChildHtml('header_slider_container') ?>
+<?php if($this->getChildHtml('topContainer')): ?>
+<div class="slidercontainer">
+<div class="container_12 header-position">
+	<div class="grid_12">
+		<?php echo $this->getChildHtml('topContainer'); ?>
+	</div>
+	<div class="clear"></div>
+</div>
+</div>
+<?php endif; ?>
+<?php if($loginAjaxStatus): ?>
+	<script type="text/javascript">
+		/* Login ajax */
+		jQuery('.top-link-login').on('click', function(){
+			<?php if (Mage::app()->getStore()->isCurrentlySecure()): ?>
+			ajaxLogin("<?php echo $this->getUrl('meigeeactions/login/', array('_secure'=>true)) ?>", false);
+			<?php else : ?>
+			ajaxLogin("<?php echo $this->getUrl('meigeeactions/login/', array('_secure'=>false)) ?>", false);
+			<?php endif; ?>
+			return false;
+		});
+	</script>
+<?php endif; ?>
+<?php if($stickyClose and !$stickyCookie): ?>
+<script type="text/javascript">
+jQuery('.sticky-close').on('click', function(){
+	sticky.hide();
+	jQuery(window).off('scroll.sticky');
+	
+	jQuery.cookie('blacknwhiteSticky', 'true', {
+		expires: <?php echo $stickyTime; ?>,
+		path: '/'
+	});
+});
+</script>
+<?php endif; ?>
+<?php if($stickyCookie): ?>
+<script type="text/javascript">
+jQuery(document).ready(function(){
+	sticky.hide();
+	jQuery(window).off('scroll.sticky');
+});
+</script>
+<?php endif; ?>
